@@ -1,0 +1,20 @@
+table {
+ border-collapse: collapse;
+ border: 10px ridge green;
+ }
+ td, th {
+ border: 1px dashed green;
+ text-align: center;
+ vertical-align: middle;
+ padding: 10px;
+ }
+ th {
+ color: blue;
+ background-color: lightgreen;
+ }
+ .eb {
+ background-color:lightblue;
+ }
+ img {
+ height: 30px;
+ }
