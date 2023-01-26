@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title> Number Guesser</title>
+    <style>
+	#mydialog {
+  display: none;
+}
+#Box{
+background-color:#0000s;
+}
+#counter {
+  background-color: #black;
+  border: solid;
+  border-style:double;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ #mydialog{
+        background-color: gray;
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+  #buttonok{
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+		
+
+	</style>
+	</head>
+	
+    <meta charset="UTF-8">
+    <body>
+        <h1> Μάντεψε τον αριθμό</h1>
+        <input id="Box">
+        <button onclick="test()">Guess</button>
+
+        <h2>Εχεις Προσπάθησει</h2>
+        <div class="counter"></div>
+		<h2 id="counter">0</h2>
+  
+	<dialog open id="mydialog">
+	
+  <p>Συγχαρητήρια το μάντεψες!!</p>
+ 
+  <form method="dialog">
+    
+	<button id="buttonok" onclick="okclick()">OK</button>
+  </form>
+</dialog>
+<div id="errordiv">
+
+</div>
+	</body>
+    <script>
+        function test ()
+        {
+            counter=counter+1;
+            cnt = document.getElementById("counter");
+            cnt.innerHTML=counter.toString();
+            y=document.getElementById("Box").value;
+            if (h==y){ 
+			var x = document.getElementById("mydialog");
+			 x.style.display ="block"; 
+                var snd = new Audio('correct.mp3');
+                    snd.play();
+           
+             }
+            else if (h>y)
+            {
+			errordiv=document.getElementById("errordiv");
+                var snd = new Audio('false.mp3');
+                    snd.play();
+          errordiv.innerHTML="Δωσε μεγαλυτερο";
+			  
+            }
+			else
+			{
+			errordiv=document.getElementById("errordiv");
+                var snd = new Audio('false.mp3');
+                    snd.play();
+          errordiv.innerHTML="Δωσε μικροτερο";
+			  
+            }
+        }
+		
+function myFunction() {
+  var x = document.getElementById("mydialog");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function okclick() {
+	var x = document.getElementById("mydialog");
+	 x.style.display = "none";
+	}
+   
+   
+   //dimiourgw tuxeo arithmo apo 1-10//
+  h=Math.floor(Math.random() * 10)+1;
+  console.log(h);
+  counter=0
+</script>
+    </script>
+
+<style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+      background-color: rgb(255, 0, 0);
+    }
+    
+    
+  </style>
+</html>
